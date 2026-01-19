@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sustainable Living Advisor</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f6f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            max-width: 700px;
+            margin: 50px auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2f6f3e;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 15px;
+            padding: 12px;
+            font-size: 16px;
+            background-color: #2f6f3e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #245a31;
+        }
+
+        .answer {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e9f3ec;
+            border-left: 4px solid #2f6f3e;
+            display: none;
+        }
+
+        .note {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #444;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Sustainable Living Advisor</h1>
+    <div class="subtitle">
+        Helping people make eco-friendly daily choices (SDG 12)
+    </div>
+
+    <input
+        type="text"
+        id="question"
+        placeholder="Ask something like: How can I save water at home?"
+    >
+
+    <button onclick="showAdvice()">Get Advice</button>
+
+    <div class="answer" id="result"></div>
+
+    <div class="note">
+        <strong>Responsible Use:</strong>
+        <ul>
+            <li>No personal data is collected</li>
+            <li>Suggestions are general and unbiased</li>
+            <li>The goal is awareness and guidance</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    function showAdvice() {
+        var userText = document.getElementById("question").value.toLowerCase();
+        var output = document.getElementById("result");
+        var message = "";
+
+        if (userText.includes("water")) {
+            message =
+                "<b>Water saving tips:</b><br>" +
+                "• Turn off the tap while brushing<br>" +
+                "• Fix leaking taps if any<br>" +
+                "• Use a bucket instead of long showers<br>" +
+                "• Reuse water for plants";
+        }
+        else if (userText.includes("electricity") || userText.includes("energy")) {
+            message =
+                "<b>Electricity saving tips:</b><br>" +
+                "• Switch off lights when not needed<br>" +
+                "• Use LED bulbs<br>" +
+                "• Unplug chargers after use<br>" +
+                "• Use daylight as much as possible";
+        }
+        else if (userText.includes("plastic")) {
+            message =
+                "<b>Reducing plastic usage:</b><br>" +
+                "• Carry cloth or reusable bags<br>" +
+                "• Avoid single-use plastic items<br>" +
+                "• Prefer steel or glass containers<br>" +
+                "• Choose products with less packaging";
+        }
+        else if (userText.includes("food") || userText.includes("waste")) {
+            message =
+                "<b>Reducing food waste:</b><br>" +
+                "• Plan meals in advance<br>" +
+                "• Store food properly<br>" +
+                "• Compost organic waste if possible<br>" +
+                "• Avoid buying more than needed";
+        }
+        else {
+            message =
+                "You can ask about:<br>" +
+                "• Saving water<br>" +
+                "• Saving electricity<br>" +
+                "• Reducing plastic use<br>" +
+                "• Managing food waste<br><br>" +
+                "Try asking a simple question related to daily life.";
+        }
+
+        output.innerHTML = message;
+        output.style.display = "block";
+    }
+</script>
+
+</body>
+</html>
+
