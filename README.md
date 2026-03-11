@@ -41,13 +41,6 @@ Version Control: Git & GitHub
 Access the project here:
 https://darshine006.github.io/Sustainability_Advisor/
 
-🖼️ Demo / Screenshots
-
-
-
-
-
-
 📈 Future Improvements
 
 Add interactive sustainability calculators
