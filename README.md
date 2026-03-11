@@ -1,7 +1,5 @@
 
-![Demo Screenshot](https://github.com/Darshine006/Sustainability_Advisor/blob/main/screenshot.png)
 🌱 Sustainability Advisor
-
 
 
 
